@@ -1,0 +1,25 @@
+{
+  "name": "agri-guide",
+  "version": "1.0.0",
+  "main": "index2.js",
+  "scripts": {
+    "start": "index2.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "@getzep/zep-cloud": "^1.0.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "openai": "^4.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "redis": "^4.6.13",
+    "redis-json": "^6.0.3",
+    "redis-om": "^0.4.3",
+    "socket.io-client": "^4.7.5",
+    "uuid": "^9.0.1",
+    "whatsapp-web.js": "^1.23.0"
+  },
+  "description": ""
+}
