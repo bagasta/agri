@@ -10,15 +10,13 @@ const ASSISTANT_ID = process.env.ASSISTANT_ID;
 
 const threads = {};
 const lastMessages = {}; // Tracking the last messages sent
-const client = new Client({
-    authStrategy: new LocalAuth({
-        dataPath: 'session'
-    }),
-    puppeteer: { headless: true },
-    webVersionCache: {
-      type: 'remote',
-      remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2410.1.html',
-    }
+client = new Client({
+    authStrategy: new LocalAuth(),
+    puppeteer: {
+        headless: true,
+        args: [ '--no-sandbox', '--disable-gpu', ],
+    },
+    webVersionCache: { type: 'remote', remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2412.54.html', }
 });
 
 client.on('qr', (qr) => {
